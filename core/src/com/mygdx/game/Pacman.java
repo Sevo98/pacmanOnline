@@ -36,12 +36,6 @@ public class Pacman {
         texture.dispose();
     }
 
-    public void moveTo(Vector2 direction) {
-        position.add(direction);
-    }
-
-    public void rotateTo() {
-    }
 
     public void moveTo(float x, float y) {
         position.set(x, y);

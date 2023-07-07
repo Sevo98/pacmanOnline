@@ -10,8 +10,6 @@ public class KeyboardAdapter extends InputAdapter {
 
     private final InputState inputState;
 
-    private final Vector2 mousePos = new Vector2();
-
     public KeyboardAdapter(InputState inputState) {
         this.inputState = inputState;
     }
@@ -47,14 +45,7 @@ public class KeyboardAdapter extends InputAdapter {
         return direction;
     }
 
-    public void updateMousePos() {
-        int x = Gdx.input.getX();
-        int y = Gdx.graphics.getHeight() - Gdx.input.getY();
-        mousePos.set(x, y);
-    }
-
     public InputState updateAndGetInputState(Vector2 playerOrigin) {
-        updateMousePos();
 
         return inputState;
     }
